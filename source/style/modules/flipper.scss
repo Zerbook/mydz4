@@ -1,0 +1,32 @@
+.flipper {
+  width: 380px;
+  height: 395px;
+  position: relative;
+  perspective: 1000px;
+  z-index: 20;
+
+  @include desktop {
+    
+  }
+
+  @include tablet {
+
+  }
+
+  @include mobile {
+    width: 300px;
+  }
+}
+
+.flipper.flip .welcome {
+  transform: rotateY(180deg);
+  z-index: 0;
+  opacity: 0;
+}
+
+.flipper.flip .auth {
+  transform: rotateY(0deg);
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+}
